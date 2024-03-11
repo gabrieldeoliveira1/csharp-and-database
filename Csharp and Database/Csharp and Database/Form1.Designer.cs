@@ -41,7 +41,9 @@
             menuStrip1 = new MenuStrip();
             página1CadastroToolStripMenuItem = new ToolStripMenuItem();
             página2InformaçõesDoProdutoToolStripMenuItem = new ToolStripMenuItem();
+            dataGridView1 = new DataGridView();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // BtnConnection
@@ -61,7 +63,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(303, 127);
+            label1.Location = new Point(368, 53);
             label1.Name = "label1";
             label1.Size = new Size(46, 18);
             label1.TabIndex = 1;
@@ -70,7 +72,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(303, 309);
+            label2.Location = new Point(368, 106);
             label2.Name = "label2";
             label2.Size = new Size(47, 18);
             label2.TabIndex = 2;
@@ -79,7 +81,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(694, 127);
+            label3.Location = new Point(664, 53);
             label3.Name = "label3";
             label3.Size = new Size(47, 18);
             label3.TabIndex = 3;
@@ -88,7 +90,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(694, 309);
+            label4.Location = new Point(664, 106);
             label4.Name = "label4";
             label4.Size = new Size(51, 18);
             label4.TabIndex = 4;
@@ -96,35 +98,35 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(260, 148);
+            txtNome.Location = new Point(325, 74);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(130, 25);
             txtNome.TabIndex = 5;
             // 
             // txtIdade
             // 
-            txtIdade.Location = new Point(260, 330);
+            txtIdade.Location = new Point(325, 127);
             txtIdade.Name = "txtIdade";
             txtIdade.Size = new Size(130, 25);
             txtIdade.TabIndex = 6;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(654, 330);
+            txtSenha.Location = new Point(624, 127);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(130, 25);
             txtSenha.TabIndex = 7;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(654, 148);
+            txtEmail.Location = new Point(624, 74);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(130, 25);
             txtEmail.TabIndex = 8;
             // 
             // button2
             // 
-            button2.Location = new Point(437, 428);
+            button2.Location = new Point(461, 74);
             button2.Name = "button2";
             button2.Size = new Size(157, 78);
             button2.TabIndex = 10;
@@ -155,12 +157,23 @@
             página2InformaçõesDoProdutoToolStripMenuItem.Text = "Página 2 - Informações do Produto";
             página2InformaçõesDoProdutoToolStripMenuItem.Click += página2InformaçõesDoProdutoToolStripMenuItem_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(184, 317);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(718, 193);
+            dataGridView1.TabIndex = 12;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(914, 540);
+            Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(txtEmail);
             Controls.Add(txtSenha);
@@ -180,6 +193,7 @@
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,5 +213,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem página1CadastroToolStripMenuItem;
         private ToolStripMenuItem página2InformaçõesDoProdutoToolStripMenuItem;
+        private DataGridView dataGridView1;
     }
 }

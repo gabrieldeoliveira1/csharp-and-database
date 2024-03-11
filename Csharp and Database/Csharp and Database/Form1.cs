@@ -11,7 +11,8 @@ namespace Csharp_and_Database
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Connection cn = new Connection();
+            dataGridView1.DataSource = cn.obterdados("Select * from usuario");
         }
 
         private void BtnConnection_Click(object sender, EventArgs e)
@@ -72,8 +73,13 @@ namespace Csharp_and_Database
         private void página2InformaçõesDoProdutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
-            this.Hide(); 
+            this.Hide();
             form2.ShowDialog();
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
             
         }
     }

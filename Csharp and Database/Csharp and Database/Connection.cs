@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
@@ -52,7 +54,19 @@ namespace Csharp_and_Database
             }
             return registro;
         }
+
+        public DataTable obterdados(string Sql)
+        {
+            //cria a tabela de dados
+            DataTable dt = new DataTable();
+            connection = getconexao();//obtenho a conexão
+            connection.Open();//abro a conexão
+            //prepara o script para o Sql
+            MySqlCommand cmd = new MySqlCommand(Sql, connection);  
+            //executa as informações na tabela
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);   
+            adapter.Fill(dt);
+            return dt; 
+        }
     }
 }
-
-//string Pao = "Insert into produto(nome_produto, quantidade, estoque) values ('" + nome_produto + "','" + quantidade + "','" + estoque + "')";
