@@ -42,8 +42,8 @@ namespace Csharp_and_Database
             {
 
 
-              
-            Idade = Convert.ToInt32(txtIdade.Text); 
+
+                Idade = Convert.ToInt32(txtIdade.Text);
                 Connection cn = new Connection();
                 if (cn.Cadastrar(txtNome.Text, txtEmail.Text, Idade, txtSenha.Text) > 0)
                 {
@@ -57,10 +57,24 @@ namespace Csharp_and_Database
 
 
 
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Problema encontrado" + ex.Message);
             }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void página2InformaçõesDoProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            this.Hide(); 
+            form2.ShowDialog();
+            
         }
     }
 }

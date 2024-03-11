@@ -38,17 +38,21 @@
             txtSenha = new TextBox();
             txtEmail = new TextBox();
             button2 = new Button();
+            menuStrip1 = new MenuStrip();
+            página1CadastroToolStripMenuItem = new ToolStripMenuItem();
+            página2InformaçõesDoProdutoToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // BtnConnection
             // 
-            BtnConnection.BackColor = Color.Gray;
+            BtnConnection.BackColor = Color.Black;
             BtnConnection.FlatStyle = FlatStyle.System;
             BtnConnection.Font = new Font("Sitka Small", 9F, FontStyle.Underline, GraphicsUnit.Point);
-            BtnConnection.ForeColor = Color.Gray;
-            BtnConnection.Location = new Point(-1, 0);
+            BtnConnection.ForeColor = Color.DodgerBlue;
+            BtnConnection.Location = new Point(0, 27);
             BtnConnection.Name = "BtnConnection";
-            BtnConnection.Size = new Size(167, 542);
+            BtnConnection.Size = new Size(162, 518);
             BtnConnection.TabIndex = 0;
             BtnConnection.Text = "Teste de conexão";
             BtnConnection.UseVisualStyleBackColor = false;
@@ -128,6 +132,29 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { página1CadastroToolStripMenuItem, página2InformaçõesDoProdutoToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(914, 24);
+            menuStrip1.TabIndex = 11;
+            menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
+            // 
+            // página1CadastroToolStripMenuItem
+            // 
+            página1CadastroToolStripMenuItem.Name = "página1CadastroToolStripMenuItem";
+            página1CadastroToolStripMenuItem.Size = new Size(122, 20);
+            página1CadastroToolStripMenuItem.Text = "Página 1 - Cadastro";
+            // 
+            // página2InformaçõesDoProdutoToolStripMenuItem
+            // 
+            página2InformaçõesDoProdutoToolStripMenuItem.Name = "página2InformaçõesDoProdutoToolStripMenuItem";
+            página2InformaçõesDoProdutoToolStripMenuItem.Size = new Size(204, 20);
+            página2InformaçõesDoProdutoToolStripMenuItem.Text = "Página 2 - Informações do Produto";
+            página2InformaçõesDoProdutoToolStripMenuItem.Click += página2InformaçõesDoProdutoToolStripMenuItem_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
@@ -144,10 +171,15 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(BtnConnection);
+            Controls.Add(menuStrip1);
             Font = new Font("Swis721 BlkCn BT", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -164,5 +196,8 @@
         private TextBox txtSenha;
         private TextBox txtEmail;
         private Button button2;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem página1CadastroToolStripMenuItem;
+        private ToolStripMenuItem página2InformaçõesDoProdutoToolStripMenuItem;
     }
 }

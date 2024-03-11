@@ -8,7 +8,7 @@ using Org.BouncyCastle.Bcpg;
 
 namespace Csharp_and_Database
 {
-    public class Connection
+    public class Produto
     {
         //local host
         static private string servidor = "127.0.0.1";
@@ -17,7 +17,7 @@ namespace Csharp_and_Database
         static private string senha = "";
         public MySqlConnection connection = null;
         static private string strcon = "server=" + servidor + ";database=" + bd + ";user id=" + usuario + ";password=" + senha;
-        
+
 
         public MySqlConnection getconexao()
         {
@@ -25,28 +25,29 @@ namespace Csharp_and_Database
             return connection;
         }
 
-        public int Cadastrar(string nome, string email, int idade, string senha)
+        public int Produt(string nome_produto, int quantidade, int estoque)
         {
             //delcara o registro do cadastro;
-            int registro = 0; 
+            int registro = 0;
             try
             {
                 //pega a conexão;
                 connection = getconexao();
-                
+
                 connection.Open(); //abre-se a conexão com o banco de dados;
-                
-                string Sql = "Insert into usuario(nome, email, idade, senha) values ('"+nome+"','"+ email+"',"+idade+",'"+senha+"')";
-                 
+
+                string Pao = "Insert into produto(nome, quantidade, estoque) values ('" +nome_produto+ "','" + quantidade + "'," + estoque + "')";
 
 
-                MySqlCommand cmd = new MySqlCommand(Sql, connection);
-               
+
+                MySqlCommand cmd = new MySqlCommand(Pao, connection);
+
                 //executa a instrução;
-               registro = cmd.ExecuteNonQuery();
+                registro = cmd.ExecuteNonQuery();
 
                 connection.Close();
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro." + ex.Message);
             }
@@ -54,5 +55,3 @@ namespace Csharp_and_Database
         }
     }
 }
-
-//string Pao = "Insert into produto(nome_produto, quantidade, estoque) values ('" + nome_produto + "','" + quantidade + "','" + estoque + "')";
