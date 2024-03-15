@@ -72,9 +72,9 @@ namespace Csharp_and_Database
 
         private void página2InformaçõesDoProdutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Login log = new Login();
             this.Hide();
-            form2.ShowDialog();
+            log.ShowDialog();
 
         }
 

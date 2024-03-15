@@ -1,15 +1,12 @@
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\Csharp and Database.exe
-C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\Csharp and Database.deps.json
-C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\Csharp and Database.runtimeconfig.json
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\Csharp and Database.dll
-C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\Csharp and Database.pdb
+C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\BouncyCastle.Cryptography.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\Google.Protobuf.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
-C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\MySql.Data.dll
-C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\System.IO.Pipelines.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\System.Text.Json.dll
@@ -22,6 +19,10 @@ C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp a
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp and Database.csproj.AssemblyReference.cache
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp_and_Database.Form1.resources
+C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp_and_Database.Login.resources
+C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp_and_Database.Principal1.resources
+C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp_and_Database.Properties.Resources.resources
+C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp_and_Database.teste.resources
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp and Database.csproj.GenerateResource.cache
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp and Database.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp and Database.AssemblyInfoInputs.cache
@@ -32,6 +33,3 @@ C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp a
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp and Database.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\refint\Csharp and Database.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp and Database.pdb
-C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp and Database.genruntimeconfig.cache
-C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\ref\Csharp and Database.dll
-C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp_and_Database.Form2.resources

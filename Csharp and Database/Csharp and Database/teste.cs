@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Csharp_and_Database
 {
-    public partial class Form2 : Form
+    public partial class teste : Form
     {
-        public Form2()
+        public teste()
         {
             InitializeComponent();
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void página2InformaçõesDoProdutoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

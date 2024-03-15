@@ -153,8 +153,8 @@
             // página2InformaçõesDoProdutoToolStripMenuItem
             // 
             página2InformaçõesDoProdutoToolStripMenuItem.Name = "página2InformaçõesDoProdutoToolStripMenuItem";
-            página2InformaçõesDoProdutoToolStripMenuItem.Size = new Size(204, 20);
-            página2InformaçõesDoProdutoToolStripMenuItem.Text = "Página 2 - Informações do Produto";
+            página2InformaçõesDoProdutoToolStripMenuItem.Size = new Size(105, 20);
+            página2InformaçõesDoProdutoToolStripMenuItem.Text = "Página 2 - Login";
             página2InformaçõesDoProdutoToolStripMenuItem.Click += página2InformaçõesDoProdutoToolStripMenuItem_Click;
             // 
             // dataGridView1
