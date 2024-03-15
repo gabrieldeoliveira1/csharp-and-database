@@ -33,3 +33,8 @@ C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp a
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp and Database.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\refint\Csharp and Database.dll
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp and Database.pdb
+C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\Csharp and Database.deps.json
+C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\Csharp and Database.runtimeconfig.json
+C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\bin\Debug\net6.0-windows\Csharp and Database.pdb
+C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp and Database.genruntimeconfig.cache
+C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\ref\Csharp and Database.dll

@@ -34,58 +34,84 @@
             btnLogar = new Button();
             btnCancel = new Button();
             button1 = new Button();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
             SuspendLayout();
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(12, 92);
+            txtNome.Location = new Point(538, 195);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(120, 23);
+            txtNome.Size = new Size(215, 23);
             txtNome.TabIndex = 0;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(12, 190);
+            txtSenha.Location = new Point(538, 141);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(120, 23);
+            txtSenha.Size = new Size(215, 23);
             txtSenha.TabIndex = 1;
             // 
             // btnLogar
             // 
-            btnLogar.Location = new Point(182, 115);
+            btnLogar.BackColor = Color.Transparent;
+            btnLogar.FlatStyle = FlatStyle.Popup;
+            btnLogar.ForeColor = Color.White;
+            btnLogar.Location = new Point(538, 256);
             btnLogar.Name = "btnLogar";
-            btnLogar.Size = new Size(76, 72);
+            btnLogar.Size = new Size(215, 29);
             btnLogar.TabIndex = 4;
-            btnLogar.Text = "Logar";
-            btnLogar.UseVisualStyleBackColor = true;
+            btnLogar.UseVisualStyleBackColor = false;
             btnLogar.Click += btnLogar_Click;
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(335, 287);
+            btnCancel.BackColor = Color.Transparent;
+            btnCancel.ForeColor = Color.Black;
+            btnCancel.Location = new Point(682, 365);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(100, 73);
+            btnCancel.Size = new Size(109, 73);
             btnCancel.TabIndex = 5;
             btnCancel.Text = "Cancelar";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(12, 327);
+            button1.BackColor = Color.FromArgb(0, 181, 255);
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Location = new Point(1, 1);
             button1.Name = "button1";
             button1.Size = new Size(120, 33);
             button1.TabIndex = 6;
             button1.Text = "Teste a conexão";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Location = new Point(527, 229);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(244, 16);
+            textBox1.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Location = new Point(523, 293);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(244, 16);
+            textBox2.TabIndex = 8;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(447, 372);
+            ClientSize = new Size(803, 450);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(btnCancel);
             Controls.Add(btnLogar);
@@ -105,5 +131,7 @@
         private Button btnLogar;
         private Button btnCancel;
         private Button button1;
+        private TextBox textBox1;
+        private TextBox textBox2;
     }
 }

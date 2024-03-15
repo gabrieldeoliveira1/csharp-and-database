@@ -80,7 +80,8 @@ namespace Csharp_and_Database
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            int cod = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+            txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells["nome"].Value.ToString();
         }
     }
 }
