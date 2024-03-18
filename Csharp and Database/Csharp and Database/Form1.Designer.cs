@@ -42,6 +42,8 @@
             página1CadastroToolStripMenuItem = new ToolStripMenuItem();
             página2InformaçõesDoProdutoToolStripMenuItem = new ToolStripMenuItem();
             dataGridView1 = new DataGridView();
+            btnAlterar = new Button();
+            button1 = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -167,12 +169,34 @@
             dataGridView1.TabIndex = 12;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // btnAlterar
+            // 
+            btnAlterar.Location = new Point(461, 158);
+            btnAlterar.Name = "btnAlterar";
+            btnAlterar.Size = new Size(157, 29);
+            btnAlterar.TabIndex = 13;
+            btnAlterar.Text = "Alterar dados";
+            btnAlterar.UseVisualStyleBackColor = true;
+            btnAlterar.Click += btnAlterar_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(461, 193);
+            button1.Name = "button1";
+            button1.Size = new Size(157, 29);
+            button1.TabIndex = 14;
+            button1.Text = "Excluir dados";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(914, 540);
+            Controls.Add(button1);
+            Controls.Add(btnAlterar);
             Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(txtEmail);
@@ -214,5 +238,7 @@
         private ToolStripMenuItem página1CadastroToolStripMenuItem;
         private ToolStripMenuItem página2InformaçõesDoProdutoToolStripMenuItem;
         private DataGridView dataGridView1;
+        private Button btnAlterar;
+        private Button button1;
     }
 }

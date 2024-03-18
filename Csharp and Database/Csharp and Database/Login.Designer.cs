@@ -67,8 +67,10 @@
             // btnCancel
             // 
             btnCancel.BackColor = Color.Transparent;
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.ForeColor = Color.Black;
-            btnCancel.Location = new Point(682, 365);
+            btnCancel.Location = new Point(713, 398);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(109, 73);
             btnCancel.TabIndex = 5;
@@ -79,8 +81,9 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(0, 181, 255);
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(1, 1);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(-7, -2);
             button1.Name = "button1";
             button1.Size = new Size(120, 33);
             button1.TabIndex = 6;
