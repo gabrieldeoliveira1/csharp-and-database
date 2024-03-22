@@ -44,6 +44,7 @@
             dataGridView1 = new DataGridView();
             btnAlterar = new Button();
             button1 = new Button();
+            comboBox1 = new ComboBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -67,7 +68,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(368, 53);
             label1.Name = "label1";
-            label1.Size = new Size(46, 18);
+            label1.Size = new Size(59, 22);
             label1.TabIndex = 1;
             label1.Text = "Nome:";
             // 
@@ -76,7 +77,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(368, 106);
             label2.Name = "label2";
-            label2.Size = new Size(47, 18);
+            label2.Size = new Size(61, 22);
             label2.TabIndex = 2;
             label2.Text = "Idade:";
             // 
@@ -85,7 +86,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(664, 53);
             label3.Name = "label3";
-            label3.Size = new Size(47, 18);
+            label3.Size = new Size(60, 22);
             label3.TabIndex = 3;
             label3.Text = "Email:";
             // 
@@ -94,7 +95,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(664, 106);
             label4.Name = "label4";
-            label4.Size = new Size(51, 18);
+            label4.Size = new Size(65, 22);
             label4.TabIndex = 4;
             label4.Text = "Senha:";
             // 
@@ -102,28 +103,28 @@
             // 
             txtNome.Location = new Point(325, 74);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(130, 25);
+            txtNome.Size = new Size(130, 30);
             txtNome.TabIndex = 5;
             // 
             // txtIdade
             // 
             txtIdade.Location = new Point(325, 127);
             txtIdade.Name = "txtIdade";
-            txtIdade.Size = new Size(130, 25);
+            txtIdade.Size = new Size(130, 30);
             txtIdade.TabIndex = 6;
             // 
             // txtSenha
             // 
             txtSenha.Location = new Point(624, 127);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(130, 25);
+            txtSenha.Size = new Size(130, 30);
             txtSenha.TabIndex = 7;
             // 
             // txtEmail
             // 
             txtEmail.Location = new Point(624, 74);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(130, 25);
+            txtEmail.Size = new Size(130, 30);
             txtEmail.TabIndex = 8;
             // 
             // button2
@@ -138,10 +139,11 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { página1CadastroToolStripMenuItem, página2InformaçõesDoProdutoToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(914, 24);
+            menuStrip1.Size = new Size(914, 28);
             menuStrip1.TabIndex = 11;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
@@ -149,13 +151,13 @@
             // página1CadastroToolStripMenuItem
             // 
             página1CadastroToolStripMenuItem.Name = "página1CadastroToolStripMenuItem";
-            página1CadastroToolStripMenuItem.Size = new Size(122, 20);
+            página1CadastroToolStripMenuItem.Size = new Size(152, 24);
             página1CadastroToolStripMenuItem.Text = "Página 1 - Cadastro";
             // 
             // página2InformaçõesDoProdutoToolStripMenuItem
             // 
             página2InformaçõesDoProdutoToolStripMenuItem.Name = "página2InformaçõesDoProdutoToolStripMenuItem";
-            página2InformaçõesDoProdutoToolStripMenuItem.Size = new Size(105, 20);
+            página2InformaçõesDoProdutoToolStripMenuItem.Size = new Size(130, 24);
             página2InformaçõesDoProdutoToolStripMenuItem.Text = "Página 2 - Login";
             página2InformaçõesDoProdutoToolStripMenuItem.Click += página2InformaçõesDoProdutoToolStripMenuItem_Click;
             // 
@@ -164,6 +166,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(184, 317);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(718, 193);
             dataGridView1.TabIndex = 12;
@@ -189,12 +192,22 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(325, 177);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(130, 30);
+            comboBox1.TabIndex = 15;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 18F);
+            AutoScaleDimensions = new SizeF(10F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(914, 540);
+            Controls.Add(comboBox1);
             Controls.Add(button1);
             Controls.Add(btnAlterar);
             Controls.Add(dataGridView1);
@@ -240,5 +253,6 @@
         private DataGridView dataGridView1;
         private Button btnAlterar;
         private Button button1;
+        private ComboBox comboBox1;
     }
 }

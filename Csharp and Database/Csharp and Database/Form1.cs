@@ -14,6 +14,9 @@ namespace Csharp_and_Database
         {
             Connection cn = new Connection();
             dataGridView1.DataSource = cn.obterdados("Select * from usuario");
+            comboBox1.DataSource = cn.obterdados("select * from perfil");
+            comboBox1.DisplayMember = "cargo";
+            comboBox1.ValueMember = "cod_perfil";
         }
 
         private void BtnConnection_Click(object sender, EventArgs e)
@@ -24,6 +27,7 @@ namespace Csharp_and_Database
             if (conexao.getconexao() == null)
             {
                 MessageBox.Show("Não conectou ao banco de dados.");
+                dataGridView1.DataSource = conexao.obterdados("Select * from usuario");
             }
             else
             {
@@ -50,6 +54,7 @@ namespace Csharp_and_Database
                 if (cn.Cadastrar(txtNome.Text, txtEmail.Text, Idade, txtSenha.Text) > 0)
                 {
                     MessageBox.Show("Dados armazenados com sucesso!");
+                    dataGridView1.DataSource = cn.obterdados("Select * from usuario");
                 }
                 else
                 {
@@ -93,7 +98,7 @@ namespace Csharp_and_Database
 
             if (cod > 0)
 
-
+                
 
 
 
@@ -104,7 +109,8 @@ namespace Csharp_and_Database
                 if (usu.alterar(txtNome.Text, txtEmail.Text, txtSenha.Text, txtIdade.Text, cod) > 0)
                 {
                     MessageBox.Show("Alterado com Sucesso.");
-
+                    Connection connection = new Connection();
+                    dataGridView1.DataSource = connection.obterdados("Select * from usuario");
 
                 }
                 else
@@ -123,9 +129,17 @@ namespace Csharp_and_Database
             if (usu.excluir(cod) > 0)
             {
                 MessageBox.Show("Usuario excluido com sucesso");
-            } else
+                Connection connection = new Connection();
+                dataGridView1.DataSource = connection.obterdados("Select * from usuario");
+            }
+            else
 
                 MessageBox.Show("Erro ao excluir");
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+               
         }
     }
 }
