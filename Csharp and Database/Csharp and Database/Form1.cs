@@ -7,7 +7,7 @@ namespace Csharp_and_Database
     {
         Connection com = new Connection();
         int cod = 0;
-        int perfil = 0;
+        int perfil;
         public Form1()
         {
             InitializeComponent();
@@ -16,7 +16,7 @@ namespace Csharp_and_Database
         private void Form1_Load(object sender, EventArgs e)
         {
             Connection cn = new Connection();
-            dataGridView1.DataSource = cn.obterdados("Select * from usuario.nome, usuario.email, usuario.senha, usuario.idade, perfil.cargo from usuario" + "inner join cargo on usuario.cod_perfila=perfil.cod_perfil");
+            dataGridView1.DataSource = cn.obterdados("Select usuario.id_usuario, usuario.nome, usuario.email, usuario.senha, usuario.idade, perfil.cargo from usuario inner join perfil on usuario.cod_perfila=perfil.cod_perfil");
             comboBox1.DataSource = cn.obterdados("select * from perfil");
             comboBox1.DisplayMember = "cargo";
             comboBox1.ValueMember = "cod_perfil";
@@ -30,7 +30,7 @@ namespace Csharp_and_Database
             if (conexao.getconexao() == null)
             {
                 MessageBox.Show("Não conectou ao banco de dados.");
-                dataGridView1.DataSource = conexao.obterdados("Select * from usuario");
+                dataGridView1.DataSource = conexao.obterdados("Select usuario.id_usuario, usuario.nome, usuario.email, usuario.senha, usuario.idade, perfil.cargo from usuario inner join perfil on usuario.cod_perfila=perfil.cod_perfil");
             }
             else
             {
@@ -57,7 +57,7 @@ namespace Csharp_and_Database
                 if (cn.Cadastrar(txtNome.Text, txtEmail.Text, Idade, txtSenha.Text, perfil) > 0)
                 {
                     MessageBox.Show("Dados armazenados com sucesso!");
-                    dataGridView1.DataSource = cn.obterdados("Select * from usuario");
+                    dataGridView1.DataSource = cn.obterdados("Select usuario.id_usuario, usuario.nome, usuario.email, usuario.senha, usuario.idade, perfil.cargo from usuario inner join perfil on usuario.cod_perfila=perfil.cod_perfil");
                 }
                 else
                 {
@@ -94,6 +94,7 @@ namespace Csharp_and_Database
             txtNome.Text = dataGridView1.Rows[e.RowIndex].Cells["nome"].Value.ToString();
             txtSenha.Text = dataGridView1.Rows[e.RowIndex].Cells["senha"].Value.ToString();
             txtIdade.Text = dataGridView1.Rows[e.RowIndex].Cells["idade"].Value.ToString();
+            comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["cargo"].Value.ToString();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -101,7 +102,7 @@ namespace Csharp_and_Database
 
             if (cod > 0)
 
-                
+
 
 
 
@@ -109,11 +110,11 @@ namespace Csharp_and_Database
 
 
                 Classe_Usuario usu = new Classe_Usuario();
-                if (usu.alterar(txtNome.Text, txtEmail.Text, txtSenha.Text, txtIdade.Text, cod) > 0)
+                if (usu.alterar(txtNome.Text, txtEmail.Text, txtSenha.Text, txtIdade.Text, cod, perfil) > 0)
                 {
                     MessageBox.Show("Alterado com Sucesso.");
                     Connection connection = new Connection();
-                    dataGridView1.DataSource = connection.obterdados("Select * from usuario");
+                    dataGridView1.DataSource = connection.obterdados("Select usuario.id_usuario, usuario.nome, usuario.email, usuario.senha, usuario.idade, perfil.cargo from usuario inner join perfil on usuario.cod_perfila=perfil.cod_perfil order by id_usuario ASC");
 
                 }
                 else
@@ -133,7 +134,7 @@ namespace Csharp_and_Database
             {
                 MessageBox.Show("Usuario excluido com sucesso");
                 Connection connection = new Connection();
-                dataGridView1.DataSource = connection.obterdados("Select * from usuario");
+                dataGridView1.DataSource = connection.obterdados("Select usuario.id_usuario, usuario.nome, usuario.email, usuario.senha, usuario.idade, perfil.cargo from usuario inner join perfil on usuario.cod_perfila=perfil.cod_perfil");
             }
             else
 
@@ -142,7 +143,25 @@ namespace Csharp_and_Database
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            perfil = Convert.ToInt32(((DataRowView)comboBox1.SelectedItem)["cod_perfil"]); 
+            perfil = Convert.ToInt32(((DataRowView)comboBox1.SelectedItem)["cod_perfil"]);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog foto = new OpenFileDialog();
+                foto.Filter = "Image file(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";  
+                if(foto.ShowDialog()==DialogResult.OK)
+                {
+                    Image arquivo = Image.FromFile(foto.FileName);
+                    pictureBox1.Image = arquivo;
+                }else
+                {
+                    MessageBox.Show("Nenhuma imagem slecionada.");
+                }
+
+            }catch(Exception ex) { MessageBox.Show("Erro: " + ex.Message);}
         }
     }
 }
