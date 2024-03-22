@@ -1,10 +1,13 @@
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Csharp_and_Database
 {
     public partial class Form1 : Form
     {
-        int cod;
+        Connection com = new Connection();
+        int cod = 0;
+        int perfil = 0;
         public Form1()
         {
             InitializeComponent();
@@ -13,7 +16,7 @@ namespace Csharp_and_Database
         private void Form1_Load(object sender, EventArgs e)
         {
             Connection cn = new Connection();
-            dataGridView1.DataSource = cn.obterdados("Select * from usuario");
+            dataGridView1.DataSource = cn.obterdados("Select * from usuario.nome, usuario.email, usuario.senha, usuario.idade, perfil.cargo from usuario" + "inner join cargo on usuario.cod_perfila=perfil.cod_perfil");
             comboBox1.DataSource = cn.obterdados("select * from perfil");
             comboBox1.DisplayMember = "cargo";
             comboBox1.ValueMember = "cod_perfil";
@@ -51,7 +54,7 @@ namespace Csharp_and_Database
 
                 Idade = Convert.ToInt32(txtIdade.Text);
                 Connection cn = new Connection();
-                if (cn.Cadastrar(txtNome.Text, txtEmail.Text, Idade, txtSenha.Text) > 0)
+                if (cn.Cadastrar(txtNome.Text, txtEmail.Text, Idade, txtSenha.Text, perfil) > 0)
                 {
                     MessageBox.Show("Dados armazenados com sucesso!");
                     dataGridView1.DataSource = cn.obterdados("Select * from usuario");
@@ -139,7 +142,7 @@ namespace Csharp_and_Database
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-               
+            perfil = Convert.ToInt32(((DataRowView)comboBox1.SelectedItem)["cod_perfil"]); 
         }
     }
 }

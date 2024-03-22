@@ -27,7 +27,7 @@ namespace Csharp_and_Database
             return connection;
         }
 
-        public int Cadastrar(string nome, string email, int idade, string senha)
+        public int Cadastrar(string nome, string email, int idade, string senha, int perfil)
         {
             //delcara o registro do cadastro;
             int registro = 0; 
@@ -38,7 +38,7 @@ namespace Csharp_and_Database
                 
                 connection.Open(); //abre-se a conexão com o banco de dados;
                 
-                string Sql = "Insert into usuario(nome, email, idade, senha) values ('"+nome+"','"+ email+"',"+idade+",'"+senha+"')";
+                string Sql = "Insert into usuario(nome, email, idade, senha, cod_perfila) values ('"+nome+"','"+ email+"',"+idade+",'"+senha+"', "+perfil+")";
                  
 
 
