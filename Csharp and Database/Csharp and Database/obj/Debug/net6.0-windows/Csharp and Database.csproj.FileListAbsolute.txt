@@ -38,3 +38,4 @@ C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp a
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp and Database.genruntimeconfig.cache
 C:\Users\aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\ref\Csharp and Database.dll
 C:\Users\Aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp a.6D6F7571.Up2Date
+C:\Users\Aluno\Documents\GitHub\csharp-and-database\Csharp and Database\Csharp and Database\obj\Debug\net6.0-windows\Csharp_and_Database.FrmProduto.resources

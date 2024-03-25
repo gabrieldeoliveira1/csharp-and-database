@@ -186,5 +186,16 @@ namespace Csharp_and_Database
         {
 
         }
+
+        private void página3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProduto produto = new FrmProduto();
+            produto.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
