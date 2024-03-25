@@ -126,6 +126,7 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(130, 30);
             txtSenha.TabIndex = 7;
+            txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // txtEmail
             // 
@@ -176,7 +177,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(826, 202);
+            dataGridView1.Size = new Size(953, 202);
             dataGridView1.TabIndex = 12;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -214,10 +215,9 @@
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(900, 87);
+            pictureBox1.Location = new Point(900, 76);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(256, 256);
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;

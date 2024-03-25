@@ -8,6 +8,7 @@ namespace Csharp_and_Database
         Connection com = new Connection();
         int cod = 0;
         int perfil;
+        string caminhofoto = "";
         public Form1()
         {
             InitializeComponent();
@@ -16,7 +17,7 @@ namespace Csharp_and_Database
         private void Form1_Load(object sender, EventArgs e)
         {
             Connection cn = new Connection();
-            dataGridView1.DataSource = cn.obterdados("Select usuario.id_usuario, usuario.nome, usuario.email, usuario.senha, usuario.idade, perfil.cargo from usuario inner join perfil on usuario.cod_perfila=perfil.cod_perfil");
+            dataGridView1.DataSource = cn.obterdados("Select usuario.id_usuario, usuario.nome, usuario.email, usuario.senha, usuario.idade, perfil.cargo, usuario.foto from usuario inner join perfil on usuario.cod_perfila=perfil.cod_perfil");
             comboBox1.DataSource = cn.obterdados("select * from perfil");
             comboBox1.DisplayMember = "cargo";
             comboBox1.ValueMember = "cod_perfil";
@@ -54,7 +55,7 @@ namespace Csharp_and_Database
 
                 Idade = Convert.ToInt32(txtIdade.Text);
                 Connection cn = new Connection();
-                if (cn.Cadastrar(txtNome.Text, txtEmail.Text, Idade, txtSenha.Text, perfil) > 0)
+                if (cn.Cadastrar(txtNome.Text, txtEmail.Text, Idade, txtSenha.Text, perfil, caminhofoto) > 0)
                 {
                     MessageBox.Show("Dados armazenados com sucesso!");
                     dataGridView1.DataSource = cn.obterdados("Select usuario.id_usuario, usuario.nome, usuario.email, usuario.senha, usuario.idade, perfil.cargo from usuario inner join perfil on usuario.cod_perfila=perfil.cod_perfil");
@@ -95,6 +96,9 @@ namespace Csharp_and_Database
             txtSenha.Text = dataGridView1.Rows[e.RowIndex].Cells["senha"].Value.ToString();
             txtIdade.Text = dataGridView1.Rows[e.RowIndex].Cells["idade"].Value.ToString();
             comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["cargo"].Value.ToString();
+            caminhofoto = (dataGridView1.Rows[e.RowIndex].Cells["foto"].@ToString());
+            pictureBox1.Image = Image.FromFile(caminhofoto);
+
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -110,11 +114,11 @@ namespace Csharp_and_Database
 
 
                 Classe_Usuario usu = new Classe_Usuario();
-                if (usu.alterar(txtNome.Text, txtEmail.Text, txtSenha.Text, txtIdade.Text, cod, perfil) > 0)
+                if (usu.alterar(txtNome.Text, txtEmail.Text, txtSenha.Text, txtIdade.Text, cod, perfil, caminhofoto) > 0)
                 {
                     MessageBox.Show("Alterado com Sucesso.");
                     Connection connection = new Connection();
-                    dataGridView1.DataSource = connection.obterdados("Select usuario.id_usuario, usuario.nome, usuario.email, usuario.senha, usuario.idade, perfil.cargo from usuario inner join perfil on usuario.cod_perfila=perfil.cod_perfil order by id_usuario ASC");
+                    dataGridView1.DataSource = connection.obterdados("Select usuario.id_usuario, usuario.nome, usuario.email, usuario.senha, usuario.idade, perfil.cargo, usuario.foto from usuario inner join perfil on usuario.cod_perfila=perfil.cod_perfil order by id_usuario ASC");
 
                 }
                 else
@@ -150,18 +154,36 @@ namespace Csharp_and_Database
         {
             try
             {
+                //abre caixa de diálogo;
                 OpenFileDialog foto = new OpenFileDialog();
-                foto.Filter = "Image file(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";  
-                if(foto.ShowDialog()==DialogResult.OK)
+                //filtro de arquivos;
+                foto.Filter = "Image file(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+                if (foto.ShowDialog() == DialogResult.OK)
                 {
+                    //caminho do arquivo;
                     Image arquivo = Image.FromFile(foto.FileName);
+                    caminhofoto = foto.FileName;
+                    //adiciona a imagem na picture;
                     pictureBox1.Image = arquivo;
-                }else
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else
                 {
-                    MessageBox.Show("Nenhuma imagem slecionada.");
+                    MessageBox.Show("Nenhuma imagem selecionada.");
                 }
 
-            }catch(Exception ex) { MessageBox.Show("Erro: " + ex.Message);}
+            }
+            catch (Exception ex) { MessageBox.Show("Erro: " + ex.Message); }
+        }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

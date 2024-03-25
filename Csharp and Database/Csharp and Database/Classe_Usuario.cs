@@ -43,10 +43,10 @@ namespace Csharp_and_Database
 
         }
 
-        public int alterar(string nome, string email, string senha, string idade, int cod, int perfil)
+        public int alterar(string nome, string email, string senha, string idade, int cod, int perfil, string foto)
         {//cria variável do código sql
             int registro = 0;
-            string sql = "Update Usuario set nome = @nome, email=@email, senha = @senha, idade = @idade, cod_perfila = @perfil where id_usuario = @codigo";
+            string sql = "Update Usuario set nome = @nome, email=@email, senha = @senha, idade = @idade, cod_perfila = @perfil, foto=@foto where id_usuario = @codigo";
             MySqlConnection com = conn.getconexao();
 
             MySqlCommand cmd = new MySqlCommand(sql, com);
@@ -58,6 +58,7 @@ namespace Csharp_and_Database
             cmd.Parameters.AddWithValue("@senha", senha);
             cmd.Parameters.AddWithValue("@codigo", cod);
             cmd.Parameters.AddWithValue("@perfil", perfil);
+            cmd.Parameters.AddWithValue("@foto", foto);
             //executa a consulta para alterar todas as informações;
             registro = Convert.ToInt32(cmd.ExecuteNonQuery()); 
             com.Close();
