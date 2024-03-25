@@ -96,8 +96,9 @@ namespace Csharp_and_Database
             txtSenha.Text = dataGridView1.Rows[e.RowIndex].Cells["senha"].Value.ToString();
             txtIdade.Text = dataGridView1.Rows[e.RowIndex].Cells["idade"].Value.ToString();
             comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["cargo"].Value.ToString();
-            caminhofoto = (dataGridView1.Rows[e.RowIndex].Cells["foto"].@ToString());
+            caminhofoto = (dataGridView1.Rows[e.RowIndex].Cells["foto"].Value.ToString());
             pictureBox1.Image = Image.FromFile(caminhofoto);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
         }
 
@@ -162,7 +163,7 @@ namespace Csharp_and_Database
                 {
                     //caminho do arquivo;
                     Image arquivo = Image.FromFile(foto.FileName);
-                    caminhofoto = foto.FileName;
+                    caminhofoto = foto.FileName.Replace("\\", "\\\\");
                     //adiciona a imagem na picture;
                     pictureBox1.Image = arquivo;
                     pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;

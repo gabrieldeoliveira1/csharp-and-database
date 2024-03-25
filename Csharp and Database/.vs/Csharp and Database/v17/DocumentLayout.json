@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Aluno\\Documents\\GitHub\\csharp-and-database\\Csharp and Database\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08091FAD-CEB4-47D0-8992-0FFABA7BDC8F}|Csharp and Database\\Csharp and Database.csproj|c:\\users\\aluno\\documents\\github\\csharp-and-database\\csharp and database\\csharp and database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08091FAD-CEB4-47D0-8992-0FFABA7BDC8F}|Csharp and Database\\Csharp and Database.csproj|solutionrelative:csharp and database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08091FAD-CEB4-47D0-8992-0FFABA7BDC8F}|Csharp and Database\\Csharp and Database.csproj|c:\\users\\aluno\\documents\\github\\csharp-and-database\\csharp and database\\csharp and database\\classe_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08091FAD-CEB4-47D0-8992-0FFABA7BDC8F}|Csharp and Database\\Csharp and Database.csproj|solutionrelative:csharp and database\\classe_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08091FAD-CEB4-47D0-8992-0FFABA7BDC8F}|Csharp and Database\\Csharp and Database.csproj|c:\\users\\aluno\\documents\\github\\csharp-and-database\\csharp and database\\csharp and database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{08091FAD-CEB4-47D0-8992-0FFABA7BDC8F}|Csharp and Database\\Csharp and Database.csproj|solutionrelative:csharp and database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08091FAD-CEB4-47D0-8992-0FFABA7BDC8F}|Csharp and Database\\Csharp and Database.csproj|c:\\users\\aluno\\documents\\github\\csharp-and-database\\csharp and database\\csharp and database\\classe_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08091FAD-CEB4-47D0-8992-0FFABA7BDC8F}|Csharp and Database\\Csharp and Database.csproj|solutionrelative:csharp and database\\classe_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08091FAD-CEB4-47D0-8992-0FFABA7BDC8F}|Csharp and Database\\Csharp and Database.csproj|c:\\users\\aluno\\documents\\github\\csharp-and-database\\csharp and database\\csharp and database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08091FAD-CEB4-47D0-8992-0FFABA7BDC8F}|Csharp and Database\\Csharp and Database.csproj|solutionrelative:csharp and database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08091FAD-CEB4-47D0-8992-0FFABA7BDC8F}|Csharp and Database\\Csharp and Database.csproj|c:\\users\\aluno\\documents\\github\\csharp-and-database\\csharp and database\\csharp and database\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,12 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -56,33 +52,32 @@
               "RelativeDocumentMoniker": "Csharp and Database\\Connection.cs",
               "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\csharp-and-database\\Csharp and Database\\Csharp and Database\\Connection.cs",
               "RelativeToolTip": "Csharp and Database\\Connection.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAQwDUAAAANAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAjwD4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T13:30:25.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-22T13:30:25.091Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Classe_Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\csharp-and-database\\Csharp and Database\\Csharp and Database\\Classe_Usuario.cs",
               "RelativeDocumentMoniker": "Csharp and Database\\Classe_Usuario.cs",
               "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\csharp-and-database\\Csharp and Database\\Csharp and Database\\Classe_Usuario.cs",
               "RelativeToolTip": "Csharp and Database\\Classe_Usuario.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAewDwAAAA1AAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAIwDwAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-18T11:59:34.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\GitHub\\csharp-and-database\\Csharp and Database\\Csharp and Database\\Form1.cs",
               "RelativeDocumentMoniker": "Csharp and Database\\Form1.cs",
               "ToolTip": "C:\\Users\\Aluno\\Documents\\GitHub\\csharp-and-database\\Csharp and Database\\Csharp and Database\\Form1.cs",
               "RelativeToolTip": "Csharp and Database\\Form1.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAvwF4AAABZAAAA",
+              "ViewState": "AQIAAFIAAAAAAAAAAADwv2IAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-08T15:33:17.604Z",
               "EditorCaption": ""
@@ -146,6 +141,10 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-18T11:47:06.527Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

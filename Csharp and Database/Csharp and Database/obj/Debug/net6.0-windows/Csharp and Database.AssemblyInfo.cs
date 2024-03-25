@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Csharp and Database")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4f97500b2ecfb422fed8ebfa335f8fe7a1a3d05")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+978cc26446268d63eefc28ad706133cf7308e4aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("Csharp and Database")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Csharp and Database")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
