@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProduto));
             button1 = new Button();
             label1 = new Label();
             label2 = new Label();
@@ -49,7 +50,7 @@
             button1.Name = "button1";
             button1.Size = new Size(112, 43);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "Cadastrar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -142,11 +143,13 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(421, 42);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(502, 300);
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // FrmProduto
             // 

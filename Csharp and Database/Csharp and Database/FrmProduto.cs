@@ -12,6 +12,8 @@ namespace Csharp_and_Database
 {
     public partial class FrmProduto : Form
     {
+
+        string caminhofoto = "";
         public FrmProduto()
         {
             InitializeComponent();
@@ -49,7 +51,41 @@ namespace Csharp_and_Database
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ClasseProduto produto = new ClasseProduto();
+            produto.foto = caminhofoto;
+            produto.nome = textBox1.Text;
+            produto.preco = Convert.ToDecimal(textBox2.Text);
+            produto.fornecedor = Convert.ToInt32(textBox3.Text);
+            produto.quantidade = Convert.ToInt32(textBox4.Text);
+
+            produto.cadastrar(produto);
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //abre caixa de diálogo;
+                OpenFileDialog foto = new OpenFileDialog();
+                //filtro de arquivos;
+                foto.Filter = "Image file(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+                if (foto.ShowDialog() == DialogResult.OK)
+                {
+                    //caminho do arquivo;
+                    Image arquivo = Image.FromFile(foto.FileName);
+                    caminhofoto = foto.FileName.Replace("\\", "\\\\");
+                    //adiciona a imagem na picture;
+                    pictureBox1.Image = arquivo;
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else
+                {
+                    MessageBox.Show("Nenhuma imagem selecionada.");
+                }
+
+            }
+            catch (Exception ex) { MessageBox.Show("Erro: " + ex.Message); }
+        }
     }
-}
+    }

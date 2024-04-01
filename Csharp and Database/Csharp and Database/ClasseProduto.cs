@@ -8,12 +8,12 @@ namespace Csharp_and_Database
 {
     internal class ClasseProduto
     {
-        int codigo;
-        string nome;
-        float preco;
-        int quantidade;
-        string foto;
-        int fornecedor;
+        public int codigo;
+        public string nome;
+        public decimal preco;
+        public int quantidade;
+        public string foto;
+        public int fornecedor;
 
         public ClasseProduto()
         {
@@ -31,9 +31,18 @@ namespace Csharp_and_Database
         public int cadastrar(ClasseProduto produto)
         {
             int registro = 0;
-            string sql = "insert into produto(nome, quantidade, preco, foto, cod_fornecedor)values(@nome, @quantidade, @preco, @foto, @fornecedor";
+            string sql = "insert into produto(nome_produto, quantidade, preco, foto, cod_fornecedor)values(@nome, @quantidade, @preco, @foto, @fornecedor)";
             string[] campos = { "@nome", "@quantidade", "@preco", "@foto", "@fornecedor" };
             Object[] valores = { produto.nome, produto.quantidade, produto.preco, produto.foto, produto.fornecedor };
+            Connection conn = new Connection();
+            if(conn.cadastro(sql, campos, valores) >= 1)
+            {
+                MessageBox.Show("Cadastro com sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Erro no cadastro");
+            }
             return registro;
         }
     }
